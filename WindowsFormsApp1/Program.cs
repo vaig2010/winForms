@@ -14,6 +14,13 @@ namespace WindowsFormsApp1
         [STAThread]
         static void Main()
         {
+            // При изменении данных в БД данные во время Debug сохранятся не будут, для сохранения данных лучше использовать Release
+            // Также не забыть поменять стандартные значения (LocalAppData) название папки
+#if DEBUG == false
+            String dbPathAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+            String dbPath = Path.Combine(dbPathAppData, "LocalAppData");
+            AppDomain.CurrentDomain.SetData("DataDirectory", dbPath);
+#endif
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

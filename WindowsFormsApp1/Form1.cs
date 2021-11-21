@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: смена Таблицы в DataGridView по кнопке
+// TODO: поменять название решения, кнопок и т.д
+// TODO: смена шаблона (groupBox) по выбору в списке меню
+// NOTE: можно добавить цвета для Type, Status
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -19,6 +23,8 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "taskManagerDBDataSet.Table". При необходимости она может быть перемещена или удалена.
+            this.tableTableAdapter.Fill(this.taskManagerDBDataSet.Table);
 
         }
 
@@ -52,15 +58,21 @@ namespace WindowsFormsApp1
                 label1.Visible = true;
             }
         }
+        
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void tableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-
+            this.Validate();
+            this.tableBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.taskManagerDBDataSet);
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void tableDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-
+            // для юзеров
+            // MessageBox.Show("Введите дату в верном формате");
+            // для разрабов
+            MessageBox.Show(e.Exception.Message);
         }
     }
 }
