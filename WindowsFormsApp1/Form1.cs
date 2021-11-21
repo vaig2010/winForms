@@ -74,5 +74,10 @@ namespace WindowsFormsApp1
             // для разрабов
             MessageBox.Show(e.Exception.Message);
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
