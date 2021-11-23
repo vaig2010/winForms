@@ -155,10 +155,10 @@ SELECT Id, Name, Description, Deadline, Priority FROM Work WHERE (Id = @Id)</Com
   <xs:element name="TaskManagerDBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TaskManagerDBDataSet" msprop:Generator_UserDSName="TaskManagerDBDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Table" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_TablePropName="Table" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_UserTableName="Table" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_RowEvArgName="TableRowChangeEvent" msprop:Generator_RowClassName="TableRow">
+        <xs:element name="Table" msprop:Generator_TableClassName="TableDataTable" msprop:Generator_TableVarName="tableTable" msprop:Generator_RowChangedName="TableRowChanged" msprop:Generator_TablePropName="Table" msprop:Generator_RowDeletingName="TableRowDeleting" msprop:Generator_RowChangingName="TableRowChanging" msprop:Generator_RowEvHandlerName="TableRowChangeEventHandler" msprop:Generator_RowDeletedName="TableRowDeleted" msprop:Generator_RowClassName="TableRow" msprop:Generator_UserTableName="Table" msprop:Generator_RowEvArgName="TableRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -184,7 +184,7 @@ SELECT Id, Name, Description, Deadline, Priority FROM Work WHERE (Id = @Id)</Com
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Work" msprop:Generator_TableClassName="WorkDataTable" msprop:Generator_TableVarName="tableWork" msprop:Generator_TablePropName="Work" msprop:Generator_RowDeletingName="WorkRowDeleting" msprop:Generator_RowChangingName="WorkRowChanging" msprop:Generator_RowEvHandlerName="WorkRowChangeEventHandler" msprop:Generator_RowDeletedName="WorkRowDeleted" msprop:Generator_UserTableName="Work" msprop:Generator_RowChangedName="WorkRowChanged" msprop:Generator_RowEvArgName="WorkRowChangeEvent" msprop:Generator_RowClassName="WorkRow">
+        <xs:element name="Work" msprop:Generator_TableClassName="WorkDataTable" msprop:Generator_TableVarName="tableWork" msprop:Generator_RowChangedName="WorkRowChanged" msprop:Generator_TablePropName="Work" msprop:Generator_RowDeletingName="WorkRowDeleting" msprop:Generator_RowChangingName="WorkRowChanging" msprop:Generator_RowEvHandlerName="WorkRowChangeEventHandler" msprop:Generator_RowDeletedName="WorkRowDeleted" msprop:Generator_RowClassName="WorkRow" msprop:Generator_UserTableName="Work" msprop:Generator_RowEvArgName="WorkRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />

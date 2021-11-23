@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// TODO: добавить возможность вставки столбца
 // TODO: поменять название решения, кнопок и т.д
 // TODO: смена шаблона (groupBox) по выбору в списке меню
 // NOTE: можно добавить цвета для Type, Status
@@ -27,14 +28,13 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            DynamicDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             this.workTableAdapter.Fill(this.taskManagerDBDataSet.Work);
-            DynamicDataGridView.DataSource = this.taskManagerDBDataSet.Work;
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "taskManagerDBDataSet.Work". При необходимости она может быть перемещена или удалена.
+            this.workTableAdapter.Fill(this.taskManagerDBDataSet.Work);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "taskManagerDBDataSet.Table". При необходимости она может быть перемещена или удалена.
             this.tableTableAdapter.Fill(this.taskManagerDBDataSet.Table);
             
@@ -43,22 +43,6 @@ namespace WindowsFormsApp1
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             textBox2.Text = listBox1.SelectedIndex.ToString();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (btngridCount < this.taskManagerDBDataSet.Tables.Count && DynamicDataGridView.DataSource != this.taskManagerDBDataSet.Tables[btngridCount])
-            {
-                DynamicDataGridView.DataSource = this.taskManagerDBDataSet.Tables[btngridCount];
-            }
-            else
-            {
-                btngridCount %= this.taskManagerDBDataSet.Tables.Count;
-                DynamicDataGridView.DataSource = this.taskManagerDBDataSet.Tables[btngridCount];
-            }
-            lblTableName.Text = this.taskManagerDBDataSet.Tables[btngridCount].ToString();
-            btngridCount++;
-            
         }
         private void tb_KeyDown(object sender, KeyEventArgs e)
         {
@@ -99,6 +83,18 @@ namespace WindowsFormsApp1
         private void textBox2_DoubleClick(object sender, EventArgs e)
         {
             TextBoxReadOnly(false);
+        }
+
+        private void bindingNavigatorSave_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tableBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.taskManagerDBDataSet);
+        }
+
+        private void menuTemplates_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tableBindingSource.DataMember = this.taskManagerDBDataSet.Tables[menuTemplates.SelectedIndex].TableName;
         }
     }
 }
