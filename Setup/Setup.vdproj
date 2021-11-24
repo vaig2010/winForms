@@ -15,25 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1730DDFE46DD4F619B5D556847C85F39"
+        "MsmKey" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7FAAEA4945BC4987AFC0DDF90CA02721"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_9824ABF768CB45DBE73DC33BA0B16D8F"
-        "OwnerKey" = "8:_D07B4F4AB3414DD1BB832BE6FB078D8B"
+        "OwnerKey" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_AADA677980A14659B536444B13B9D50E"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D07B4F4AB3414DD1BB832BE6FB078D8B"
+        "MsmKey" = "8:_E2A303D5D56A4D2498CD722B383B9C55"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D07B4F4AB3414DD1BB832BE6FB078D8B"
+        "OwnerKey" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -131,6 +131,62 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_18B1A367A7B941FF9EB6A20D992421E4"
+            {
+            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_A5E159B7_0B38_4B2E_8DDB_6B6207CEF03F"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_484DDA436F0A4D83BABB31D8A73A359F"
+            {
+            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "FileType" = "3:2"
+            "InstallAction" = "3:3"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_25372DB9_B7D6_4B88_84C8_B7875355D318"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_52BBE9736EC148DC9727E83CD990CE07"
+            {
+            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_4DE00732_9397_4487_9778_D402BAA9E034"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_D16615C6A8D442279684D67C9B319446"
+            {
+            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "FileType" = "3:2"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_F9548B47_3E6C_4AB6_AE78_D6C48951B661"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -154,7 +210,7 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1730DDFE46DD4F619B5D556847C85F39"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7FAAEA4945BC4987AFC0DDF90CA02721"
             {
             "SourcePath" = "8:..\\WindowsFormsApp1\\TaskManagerDB_log.ldf"
             "TargetName" = "8:TaskManagerDB_log.ldf"
@@ -166,7 +222,7 @@
             "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
-            "Permanent" = "11:TRUE"
+            "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
@@ -205,7 +261,7 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AADA677980A14659B536444B13B9D50E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2A303D5D56A4D2498CD722B383B9C55"
             {
             "SourcePath" = "8:..\\WindowsFormsApp1\\TaskManagerDB.mdf"
             "TargetName" = "8:TaskManagerDB.mdf"
@@ -217,7 +273,7 @@
             "ReadOnly" = "11:FALSE"
             "Hidden" = "11:FALSE"
             "System" = "11:FALSE"
-            "Permanent" = "11:TRUE"
+            "Permanent" = "11:FALSE"
             "SharedLegacy" = "11:FALSE"
             "PackageAs" = "3:1"
             "Register" = "3:1"
@@ -262,6 +318,17 @@
             "Property" = "8:ProgramMenuFolder"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_F8022781D5CB49BD95611BD36FA965CD"
+                    {
+                    "Name" = "8:Installer Example"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_20515589555346EEA271C26E5D7DF2A2"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_89945FEBDE88403BB0F60122BF86E4AC"
@@ -304,7 +371,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
         "ProductCode" = "8:{87A020F2-6354-4D47-8C29-EFB14090BD65}"
-        "PackageCode" = "8:{9C054BFC-9CA5-4B14-B507-B73B370BE000}"
+        "PackageCode" = "8:{8469517D-CA6E-46D0-9830-F032391A8889}"
         "UpgradeCode" = "8:{A14A18DF-1C5A-4A1F-8C94-DAF908BFB645}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -424,16 +491,30 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_AF3A440B307247BB8DC1BA694BD46D2C"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_64C1958BE6784C4E805D79BFD2838F8C"
             {
-            "Name" = "8:TaskManager"
+            "Name" = "8:TaskApp"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D07B4F4AB3414DD1BB832BE6FB078D8B"
+            "Target" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
             "Folder" = "8:_89945FEBDE88403BB0F60122BF86E4AC"
+            "WorkingFolder" = "8:_8FC01DB00DCF4C0D8E9826AE0C04E8B7"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A26A21BD009A42C09F4C1EB2C955A3A7"
+            {
+            "Name" = "8:TaskApp"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "Folder" = "8:_F8022781D5CB49BD95611BD36FA965CD"
             "WorkingFolder" = "8:_8FC01DB00DCF4C0D8E9826AE0C04E8B7"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -837,7 +918,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_D07B4F4AB3414DD1BB832BE6FB078D8B"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_25540BF7E1DD4A51869FDB2F19A5FB70"
             {
             "SourcePath" = "8:..\\WindowsFormsApp1\\obj\\Release\\WindowsFormsApp1.exe"
             "TargetName" = "8:"

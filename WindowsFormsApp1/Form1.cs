@@ -18,7 +18,6 @@ namespace WindowsFormsApp1
    
     public partial class Form1 : Form
     {
-        int btngridCount = 0;
         private void TextBoxReadOnly(bool flag)
         {
             textBox2.ReadOnly = flag;
@@ -28,16 +27,12 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            this.workTableAdapter.Fill(this.taskManagerDBDataSet.Work);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "taskManagerDBDataSet.Work". При необходимости она может быть перемещена или удалена.
-            this.workTableAdapter.Fill(this.taskManagerDBDataSet.Work);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "taskManagerDBDataSet.Table". При необходимости она может быть перемещена или удалена.
             this.tableTableAdapter.Fill(this.taskManagerDBDataSet.Table);
-            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +90,11 @@ namespace WindowsFormsApp1
         private void menuTemplates_SelectedIndexChanged(object sender, EventArgs e)
         {
             tableBindingSource.DataMember = this.taskManagerDBDataSet.Tables[menuTemplates.SelectedIndex].TableName;
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
