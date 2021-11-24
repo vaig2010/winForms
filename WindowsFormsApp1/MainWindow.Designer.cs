@@ -34,13 +34,15 @@
             // 
             // btnGoNext
             // 
+            this.btnGoNext.BackColor = System.Drawing.Color.Transparent;
+            this.btnGoNext.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGoNext.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGoNext.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnGoNext.Location = new System.Drawing.Point(408, 323);
+            this.btnGoNext.Location = new System.Drawing.Point(432, 353);
             this.btnGoNext.Name = "btnGoNext";
-            this.btnGoNext.Size = new System.Drawing.Size(306, 63);
+            this.btnGoNext.Size = new System.Drawing.Size(329, 63);
             this.btnGoNext.TabIndex = 0;
-            this.btnGoNext.Text = "Пойти нахуй";
-            this.btnGoNext.UseVisualStyleBackColor = true;
+            this.btnGoNext.UseVisualStyleBackColor = false;
             this.btnGoNext.Click += new System.EventHandler(this.btnGoNext_Click);
             // 
             // MainWindow
@@ -48,8 +50,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnGoNext);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

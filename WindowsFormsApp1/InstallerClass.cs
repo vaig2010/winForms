@@ -38,11 +38,14 @@ namespace WindowsFormsApp1
         {
             try
             {
+                // BUG: запускает не тот exe файл после установки. Также запускается слишком рано.
+                // NOTE: также выдает ошибку именно подключения к бд. возможно скрытый баг с бд.
+                /*
                 Directory.SetCurrentDirectory(Path.GetDirectoryName
                 (Assembly.GetExecutingAssembly().Location));
                 Process.Start(Path.GetDirectoryName(
                   Assembly.GetExecutingAssembly().Location) + "\\WindowsFormsApp1.exe");
-
+                */
             }
             catch 
             {

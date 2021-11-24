@@ -18,12 +18,6 @@ namespace WindowsFormsApp1
    
     public partial class Form1 : Form
     {
-        private void TextBoxReadOnly(bool flag)
-        {
-            textBox2.ReadOnly = flag;
-            textBox2.BackColor = flag ? SystemColors.Control : SystemColors.Window;
-            textBox2.BorderStyle = flag ? BorderStyle.None : BorderStyle.FixedSingle;
-        }
         public Form1()
         {
             InitializeComponent();
@@ -31,27 +25,11 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "taskManagerDBDataSet.Table". При необходимости она может быть перемещена или удалена.
+            //BUG: autoincrement и navigator работают плохо
             this.tableTableAdapter.Fill(this.taskManagerDBDataSet.Table);
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            textBox2.Text = listBox1.SelectedIndex.ToString();
-        }
-        private void tb_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                TextBoxReadOnly(true);
-            }
-        }
-
-        private void tableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.tableBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.taskManagerDBDataSet);
+            // для отображения новых таблиц нужен новый адаптер
+            this.workTableAdapter.Fill(this.taskManagerDBDataSet.Work);
+            tableDataGridView.DataSource = tableBindingSource;
         }
 
         private void tableDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -65,19 +43,6 @@ namespace WindowsFormsApp1
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void Form1_MouseClick(object sender, MouseEventArgs e)
-        {
-            if (textBox2.ReadOnly == false)
-            {
-                TextBoxReadOnly(true);
-            }
-        }
-
-        private void textBox2_DoubleClick(object sender, EventArgs e)
-        {
-            TextBoxReadOnly(false);
         }
 
         private void bindingNavigatorSave_Click(object sender, EventArgs e)

@@ -15,25 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7FAAEA4945BC4987AFC0DDF90CA02721"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9824ABF768CB45DBE73DC33BA0B16D8F"
-        "OwnerKey" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+        "OwnerKey" = "8:_B73BE215E40843A897818A997D34521E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E2A303D5D56A4D2498CD722B383B9C55"
+        "MsmKey" = "8:_B73BE215E40843A897818A997D34521E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B7C57FC681A84E42BAFC32A541E0B501"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C14F4B9482B747C3B8F4D2198947C6F6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -46,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+        "OwnerKey" = "8:_B73BE215E40843A897818A997D34521E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -131,59 +131,59 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_18B1A367A7B941FF9EB6A20D992421E4"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_30DF62EE9AD0499785C32B5A78720FBF"
             {
             "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
             "Condition" = "8:"
-            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
-            "FileType" = "3:2"
-            "InstallAction" = "3:2"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_A5E159B7_0B38_4B2E_8DDB_6B6207CEF03F"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_484DDA436F0A4D83BABB31D8A73A359F"
-            {
-            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
-            "Condition" = "8:"
-            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
-            "FileType" = "3:2"
-            "InstallAction" = "3:3"
-            "Arguments" = "8:"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_25372DB9_B7D6_4B88_84C8_B7875355D318"
-            "InstallerClass" = "11:TRUE"
-            "CustomActionData" = "8:"
-            }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_52BBE9736EC148DC9727E83CD990CE07"
-            {
-            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
-            "Condition" = "8:"
-            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "Object" = "8:_B73BE215E40843A897818A997D34521E"
             "FileType" = "3:2"
             "InstallAction" = "3:4"
             "Arguments" = "8:"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_4DE00732_9397_4487_9778_D402BAA9E034"
+            "Identifier" = "8:_1A82A4DD_8BB3_4AA4_A1D3_43073D1BB862"
             "InstallerClass" = "11:TRUE"
             "CustomActionData" = "8:"
             }
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_D16615C6A8D442279684D67C9B319446"
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_69E307F6F5474B2ABAAA4DEAC6AA8DB2"
             {
             "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
             "Condition" = "8:"
-            "Object" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "Object" = "8:_B73BE215E40843A897818A997D34521E"
             "FileType" = "3:2"
             "InstallAction" = "3:1"
             "Arguments" = "8:"
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
-            "Identifier" = "8:_F9548B47_3E6C_4AB6_AE78_D6C48951B661"
+            "Identifier" = "8:_FE6729D1_22BF_4F34_95A5_A2268FFC015E"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_EF190F48A4E748D89373A8AE024971C0"
+            {
+            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_B73BE215E40843A897818A997D34521E"
+            "FileType" = "3:2"
+            "InstallAction" = "3:3"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_BE548C6C_52D6_4E44_B392_D3DEE2936463"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_F4964A1A46D84732BE910BDE7C09DDAC"
+            {
+            "Name" = "8:Основные выходные файлы from WindowsFormsApp1 (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_B73BE215E40843A897818A997D34521E"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_E2ECF1EE_848E_447A_B1D7_8FE3192CD5D9"
             "InstallerClass" = "11:TRUE"
             "CustomActionData" = "8:"
             }
@@ -210,26 +210,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7FAAEA4945BC4987AFC0DDF90CA02721"
-            {
-            "SourcePath" = "8:..\\WindowsFormsApp1\\TaskManagerDB_log.ldf"
-            "TargetName" = "8:TaskManagerDB_log.ldf"
-            "Tag" = "8:"
-            "Folder" = "8:_67BB0A8EA6D140F4B7E38021B7887071"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9824ABF768CB45DBE73DC33BA0B16D8F"
             {
             "AssemblyRegister" = "3:1"
@@ -261,7 +241,27 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E2A303D5D56A4D2498CD722B383B9C55"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B7C57FC681A84E42BAFC32A541E0B501"
+            {
+            "SourcePath" = "8:..\\WindowsFormsApp1\\TaskManagerDB_log.ldf"
+            "TargetName" = "8:TaskManagerDB_log.ldf"
+            "Tag" = "8:"
+            "Folder" = "8:_67BB0A8EA6D140F4B7E38021B7887071"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C14F4B9482B747C3B8F4D2198947C6F6"
             {
             "SourcePath" = "8:..\\WindowsFormsApp1\\TaskManagerDB.mdf"
             "TargetName" = "8:TaskManagerDB.mdf"
@@ -491,7 +491,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_64C1958BE6784C4E805D79BFD2838F8C"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D1B17BB626854C89AE5C1AB54BB6C5C6"
             {
             "Name" = "8:TaskApp"
             "Arguments" = "8:"
@@ -499,22 +499,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "Target" = "8:_B73BE215E40843A897818A997D34521E"
             "Folder" = "8:_89945FEBDE88403BB0F60122BF86E4AC"
-            "WorkingFolder" = "8:_8FC01DB00DCF4C0D8E9826AE0C04E8B7"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A26A21BD009A42C09F4C1EB2C955A3A7"
-            {
-            "Name" = "8:TaskApp"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_25540BF7E1DD4A51869FDB2F19A5FB70"
-            "Folder" = "8:_F8022781D5CB49BD95611BD36FA965CD"
             "WorkingFolder" = "8:_8FC01DB00DCF4C0D8E9826AE0C04E8B7"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -918,7 +904,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_25540BF7E1DD4A51869FDB2F19A5FB70"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B73BE215E40843A897818A997D34521E"
             {
             "SourcePath" = "8:..\\WindowsFormsApp1\\obj\\Release\\WindowsFormsApp1.exe"
             "TargetName" = "8:"

@@ -821,8 +821,7 @@ namespace WindowsFormsApp1 {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AutoIncrementSeed = 1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
@@ -1487,7 +1486,7 @@ SELECT Id, Name, Date, Status, Type FROM [Table] WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Name, Date, Status, Type FROM dbo.[Table]";
+            this._commandCollection[0].CommandText = "SELECT * FROM dbo.[Table]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1915,7 +1914,7 @@ SELECT Id, Name, Description, Deadline, Priority FROM Work WHERE (Id = @Id)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Name, Description, Deadline, Priority FROM dbo.[Work]";
+            this._commandCollection[0].CommandText = "SELECT * FROM dbo.[Work]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
