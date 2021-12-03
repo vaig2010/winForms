@@ -30,6 +30,8 @@ namespace WindowsFormsApp1
             // для отображения новых таблиц нужен новый адаптер
             this.workTableAdapter.Fill(this.taskManagerDBDataSet.Work);
             tableDataGridView.DataSource = tableBindingSource;
+
+            this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
         }
 
         private void tableDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -54,7 +56,8 @@ namespace WindowsFormsApp1
 
         private void menuTemplates_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tableBindingSource.DataMember = this.taskManagerDBDataSet.Tables[menuTemplates.SelectedIndex].TableName;
+            if (menuTemplates.SelectedIndex != -1)
+                tableBindingSource.DataMember = this.taskManagerDBDataSet.Tables[menuTemplates.SelectedIndex].TableName;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
