@@ -34,6 +34,7 @@ namespace WindowsFormsApp1
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -59,7 +60,6 @@ namespace WindowsFormsApp1
             this.tableTableAdapter = new WindowsFormsApp1.TaskManagerDBDataSetTableAdapters.TableTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.TaskManagerDBDataSetTableAdapters.TableAdapterManager();
             this.workTableAdapter = new WindowsFormsApp1.TaskManagerDBDataSetTableAdapters.WorkTableAdapter();
-            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableDataGridView)).BeginInit();
@@ -91,8 +91,14 @@ namespace WindowsFormsApp1
             // openToolStripMenuItem1
             // 
             this.openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            this.openToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem1.Size = new System.Drawing.Size(103, 22);
             this.openToolStripMenuItem1.Text = "Open";
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Text = "View";
             // 
             // fileToolStripMenuItem
             // 
@@ -110,29 +116,34 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.tableDataGridView);
             this.groupBox1.Controls.Add(this.bindingNavigator1);
-            this.groupBox1.Location = new System.Drawing.Point(192, 57);
+            this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(577, 312);
+            this.groupBox1.Size = new System.Drawing.Size(757, 312);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
             // tableDataGridView
             // 
             this.tableDataGridView.AllowUserToAddRows = false;
-            this.tableDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tableDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableDataGridView.Location = new System.Drawing.Point(8, 54);
+            this.tableDataGridView.Location = new System.Drawing.Point(176, 54);
             this.tableDataGridView.Name = "tableDataGridView";
-            this.tableDataGridView.Size = new System.Drawing.Size(544, 234);
+            this.tableDataGridView.Size = new System.Drawing.Size(575, 248);
             this.tableDataGridView.TabIndex = 13;
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.bindingNavigator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bindingNavigator1.BindingSource = this.tableBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -150,7 +161,7 @@ namespace WindowsFormsApp1
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.tableBindingNavigatorSaveItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(3, 16);
+            this.bindingNavigator1.Location = new System.Drawing.Point(176, 16);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -311,12 +322,6 @@ namespace WindowsFormsApp1
             // workTableAdapter
             // 
             this.workTableAdapter.ClearBeforeFill = true;
-            // 
-            // viewToolStripMenuItem
-            // 
-            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.viewToolStripMenuItem.Text = "View";
             // 
             // Form1
             // 
