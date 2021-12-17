@@ -39,6 +39,10 @@ namespace WindowsFormsApp1
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableDataGridView = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.tableBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -54,15 +58,17 @@ namespace WindowsFormsApp1
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tableBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.menuTemplates = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.menuTemplates = new System.Windows.Forms.ListBox();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tableTableAdapter = new WindowsFormsApp1.TaskManagerDBDataSetTableAdapters.TableTableAdapter();
             this.tableAdapterManager = new WindowsFormsApp1.TaskManagerDBDataSetTableAdapters.TableAdapterManager();
             this.workTableAdapter = new WindowsFormsApp1.TaskManagerDBDataSetTableAdapters.WorkTableAdapter();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableDataGridView)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableBindingSource)).BeginInit();
@@ -77,7 +83,7 @@ namespace WindowsFormsApp1
             this.viewToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(781, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(577, 24);
             this.menuStrip1.TabIndex = 7;
             // 
             // fileToolStripMenuItem1
@@ -116,34 +122,62 @@ namespace WindowsFormsApp1
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.tableDataGridView);
             this.groupBox1.Controls.Add(this.bindingNavigator1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 57);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.menuTemplates);
+            this.groupBox1.Location = new System.Drawing.Point(16, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 312);
+            this.groupBox1.Size = new System.Drawing.Size(555, 398);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tableDataGridView
             // 
             this.tableDataGridView.AllowUserToAddRows = false;
-            this.tableDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tableDataGridView.Location = new System.Drawing.Point(176, 54);
+            this.tableDataGridView.ContextMenuStrip = this.contextMenuStrip1;
+            this.tableDataGridView.Location = new System.Drawing.Point(6, 49);
             this.tableDataGridView.Name = "tableDataGridView";
-            this.tableDataGridView.Size = new System.Drawing.Size(575, 248);
+            this.tableDataGridView.Size = new System.Drawing.Size(544, 334);
             this.tableDataGridView.TabIndex = 13;
+            this.tableDataGridView.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableDataGridView_CellEnter);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.deleteToolStripMenuItem,
+            this.saveToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(108, 70);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(107, 22);
+            this.toolStripMenuItem1.Text = "Add";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.bindingNavigator1.BindingSource = this.tableBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -161,7 +195,7 @@ namespace WindowsFormsApp1
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
             this.tableBindingNavigatorSaveItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(176, 16);
+            this.bindingNavigator1.Location = new System.Drawing.Point(230, 21);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -180,11 +214,13 @@ namespace WindowsFormsApp1
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // tableBindingSource
             // 
             this.tableBindingSource.DataMember = "Table";
             this.tableBindingSource.DataSource = this.taskManagerDBDataSet;
+            this.tableBindingSource.CurrentChanged += new System.EventHandler(this.tableBindingSource_CurrentChanged);
             // 
             // taskManagerDBDataSet
             // 
@@ -278,12 +314,15 @@ namespace WindowsFormsApp1
             this.tableBindingNavigatorSaveItem.Text = "Сохранить";
             this.tableBindingNavigatorSaveItem.Click += new System.EventHandler(this.bindingNavigatorSave_Click);
             // 
-            // monthCalendar1
+            // label2
             // 
-            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.monthCalendar1.Location = new System.Drawing.Point(12, 197);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Templates";
             // 
             // menuTemplates
             // 
@@ -292,21 +331,17 @@ namespace WindowsFormsApp1
             this.menuTemplates.Items.AddRange(new object[] {
             "Study",
             "Work"});
-            this.menuTemplates.Location = new System.Drawing.Point(12, 73);
+            this.menuTemplates.Location = new System.Drawing.Point(6, 16);
             this.menuTemplates.Name = "menuTemplates";
             this.menuTemplates.Size = new System.Drawing.Size(164, 30);
             this.menuTemplates.TabIndex = 10;
             this.menuTemplates.SelectedIndexChanged += new System.EventHandler(this.menuTemplates_SelectedIndexChanged);
             // 
-            // label2
+            // notifyIcon1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(12, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Templates";
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
             // 
             // tableTableAdapter
             // 
@@ -323,18 +358,27 @@ namespace WindowsFormsApp1
             // 
             this.workTableAdapter.ClearBeforeFill = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(16, 461);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(555, 20);
+            this.textBox1.TabIndex = 9;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(781, 428);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.menuTemplates);
-            this.Controls.Add(this.monthCalendar1);
+            this.ClientSize = new System.Drawing.Size(577, 512);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AppName";
@@ -345,6 +389,7 @@ namespace WindowsFormsApp1
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableDataGridView)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -360,7 +405,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem1;
         private System.Windows.Forms.ListBox menuTemplates;
@@ -385,6 +429,12 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripButton tableBindingNavigatorSaveItem;
         private TaskManagerDBDataSetTableAdapters.WorkTableAdapter workTableAdapter;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
