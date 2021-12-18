@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             // Также не забыть поменять стандартные значения (LocalAppData) название папки
 #if DEBUG == false
             String dbPathAppData = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            String dbPath = Path.Combine(dbPathAppData, "LocalAppData");
+            String dbPath = Path.Combine(dbPathAppData, "TaskApp");
             AppDomain.CurrentDomain.SetData("DataDirectory", dbPath);
 #endif
             Application.EnableVisualStyles();

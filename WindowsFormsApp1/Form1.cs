@@ -39,12 +39,13 @@ namespace WindowsFormsApp1
                     {
                         try
                         {
-                            notifyIcon1.Text = "some text";
+                            notifyIcon1.Text = "TaskApp";
                             notifyIcon1.Visible = true;
                             notifyIcon1.BalloonTipTitle = "Today";
-                            notifyIcon1.BalloonTipText = tableDataGridView[1, i].Value.ToString();
+                            notifyIcon1.BalloonTipText = !string.IsNullOrEmpty(tableDataGridView[1, i].Value.ToString()) ? tableDataGridView[1, i].Value.ToString() : "Empty name";
                             notifyIcon1.ShowBalloonTip(100);
                         }
+                        
                         catch
                         {
                             MessageBox.Show("Enter valid values", "Error");
@@ -121,21 +122,7 @@ namespace WindowsFormsApp1
             }
         }
         #endregion
-
-        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
+        
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -180,6 +167,11 @@ namespace WindowsFormsApp1
                 tableBindingSource.Filter = string.Empty;
             }
             
+        }
+
+        private void tableDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
